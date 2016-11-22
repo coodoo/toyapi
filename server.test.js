@@ -1,3 +1,6 @@
+'use strict';
+
+import server from './server'
 
 describe( 'see all these tests running and passing', () => {
 

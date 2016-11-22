@@ -15,7 +15,7 @@ var server = http.createServer( function(request, response){
 });
 
 //Lets start our server
-server.listen(PORT, function(){
-    console.log("Server listening on: http://localhost:%s", PORT);
-    console.log( MYKEY )
-});
+// server.listen(PORT, function(){
+//     console.log("Server listening on: http://localhost:%s", PORT);
+//     console.log( MYKEY )
+// });
