@@ -13,7 +13,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "jest --coverage",
-    "start": "$(npm bin)/nodemon -L server.js"
+    "start": "NODE_ENV=production node server.js",
+    "start2": "$(npm bin)/nodemon -L server.js"
   },
   "author": "",
   "license": "ISC",

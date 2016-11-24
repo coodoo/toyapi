@@ -1,9 +1,11 @@
 /* eslint-disable */
-var http = require('http');
+var http = require('http')
 var MYKEY='12'
 
 //Lets define a port we want to listen to
-const PORT=3001;
+const PORT=3001
+
+console.log( process.env )
 
 var server = http.createServer( function(request, response){
 	let str = `
@@ -11,11 +13,13 @@ var server = http.createServer( function(request, response){
 	[db master]=${process.env.db_master}
 	[db read]=${process.env.db_read}
 	`
-    response.end( MYKEY + '成功囉！\n' + str );
-});
+    response.end( MYKEY + '成功囉！\n' + str )
+})
 
 //Lets start our server
-// server.listen(PORT, function(){
-//     console.log("Server listening on: http://localhost:%s", PORT);
-//     console.log( MYKEY )
-// });
+if( process.env.NODE_ENV === 'production' ){
+	server.listen(PORT, function(){
+	    console.log("Server listening on: http://localhost:%s", PORT)
+	    console.log( MYKEY )
+	})
+}
