@@ -3,9 +3,9 @@ var http = require('http')
 var MYKEY='12'
 
 //Lets define a port we want to listen to
-const PORT=3001
+const PORT=8080
 
-console.log( process.env )
+// console.log( process.env )
 
 var server = http.createServer( function(request, response){
 	let str = `
