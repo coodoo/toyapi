@@ -1,3 +1,6 @@
 FROM node:latest
+WORKDIR /code
+COPY . .
 EXPOSE 8080
-ENTRYPOINT ["node", "./server.js"]
+ENV NODE_ENV=production
+ENTRYPOINT ["node", "server.js"]
